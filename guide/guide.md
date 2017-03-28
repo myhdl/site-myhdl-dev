@@ -24,7 +24,7 @@ Before considering to contribute to development, note that there are other ways
 to help.
 
 In particular, the best way to help is to use MyHDL in design projects *and let
-people now about it*. If you want, you can use 
+people know about it*. If you want, you can use 
 [the users section on the MyHDL site][myhdl-users].
 
 Another great help is to report issues in the [issue-tracker].  Add a small
