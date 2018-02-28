@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Summer of Code 2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap-flatly.min.css" rel="stylesheet" media="screen">
+    <!-- customizations -->
+    <link href="/css/site.css" rel="stylesheet" media="screen">
+    <!-- pygments -->
+    <link href="/css/syntax.css" rel="stylesheet" media="screen">
+    <!-- icons -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/media/myhdl_favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48954307-1', 'myhdl.org');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">MyHDL / dev</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-left">
+ 
+            <li class="dropdown">
+              <a href="/guide/" class="dropdown-toggle" data-toggle="dropdown">Guide <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/guide/guide.html">Development Guide</a></li>    
+                <li><a href="/guide/guide_tests.html">Writing Tests</a></li>    
+              </ul>
+            </li>
+            <li><a href="/meps/">MEPs</a></li>
+            <li class="active"><a href="/gsoc/">GSoC</a></li>
+            <li class="dropdown">
+              <a href="/resources/" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://docs.myhdl.org/en/latest">Manual under development</a></li>    
+                <li><a href="/resources/tasks/">Tasks</a></li>    
+                <li><a href="/resources/ideas/">Ideas</a></li>    
+                <li><a href="/resources/archive/">Archive</a></li>    
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/info.html">Info</a></li>
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<div class="container">
+
+    <ol class="breadcrumb">
+       <li><a href="/">Home</a></li>
+       <li><a href="/gsoc/">Google Summer of Code</a></li>
+       <li class="active">Google Summer of Code 2018</li>
+    </ol>
+
+    <div class="page-header">
+        <h1>Google Summer of Code 2018</h1>
+        <p><i>Last modified: 28-Feb-2018 by Christopher Felton</i></p>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-7 content" role="main">
+            <p>Go to the <a href="http://discourse.myhdl.org/t/students-thinking-about-applying-to-myhdl-for-gsoc/164/2">MyHDL forum</a> and/or the <a href="https://fossi-foundation.org/gsoc18-ideas.html">FOSSi</a>
+and introduce yourself and your interests!</p>
+<h2 id="myhdl-project-introduction">MyHDL Project Introduction</h2>
+<p><a href="http://www.myhdl.org">MyHDL</a> is a Python package that extends Python
+as a hardware description language (<abbr title="Hardware Description Language">HDL</abbr>).  MyHDL empowers implementation
+of complex digital circuits that can be targeted towards ASIC and
+FPGA technologies.</p>
+<p><a href="http://www.jandecaluwe.com/">Jan Decaluwe</a> is the creator and
+<a href="http://en.wikipedia.org/wiki/Benevolent_dictator_for_life">BDFL</a>. The
+MyHDL project has been around for many years and has had many successes
+bringing a modern and software influenced approach to <abbr title="Hardware Description Language">HDL</abbr> development.
+MyHDL has been used for various FPGA projects and numerous
+<a href="http://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASIC</a>
+projects <a href="https://www.ll.mit.edu/HPEC/agendas/proc07/Day2/12_Dillon_Poster.pdf" title="Accelerating Algorithm">1</a>.</p>
+<p>The following are good starting points to learn more about
+MyHDL:</p>
+<ul>
+<li><a href="http://docs.myhdl.org/en/latest/manual/preface.html">MyHDL Manual Intro</a></li>
+<li><a href="http://www.myhdl.org/start/why.html">Why MyHDL</a></li>
+<li><a href="http://www.myhdl.org/start/whatitisnot.html">What MyHDL is Not</a></li>
+</ul>
+<h2 id="myhdl-community">MyHDL Community</h2>
+<p>The <a href="http://discourse.myhdl.org/">MyHDL forum</a>
+and the <a href="https://gitter.im/myhdl/myhdl">myhdl gitter channel</a>
+can be used to interact with the MyHDL community.  Most questions
+can be answered in one of these two outlets.</p>
+<ul>
+<li><a href="http://discourse.myhdl.org/">MyHDL forum</a></li>
+<li><a href="https://gitter.im/myhdl/myhdl">MyHDL gitter</a></li>
+<li><a href="http://github.com/myhdl/myhdl">MyHDL repository on github</a></li>
+<li><a href="https://twitter.com/MyHDL">MyHDL on twitter</a></li>
+<li>IRC #myhdl channel on <a href="http://www.freenode.net">Freenode</a></li>
+</ul>
+<p>Questions can also be posted to:</p>
+<ul>
+<li><a href="https://www.fpgarelated.com/forums">FPGArelated forum</a></li>
+<li><a href="http://stackoverflow.com/questions/tagged/myhdl">Stackoverflow myhdl</a></li>
+</ul>
+<p>The gitter channel is informal and typically a question
+will be part of a time-limited conversation.  On the forum
+more users/developers will have a chance to comment on the question
+and the question will receive more feedback over time.  </p>
+<p>Before a question
+is posted to the forum or gitter care should be taken to construct
+a useful question.  Simple guidelines for posting questions to
+the community:</p>
+<ol>
+<li>Limit the scope of the questions.</li>
+<li>Briefly state what is to be accomplish.</li>
+<li>Give a small example embedded in the question.</li>
+<li>Clearly state the question in the context of the
+      simplified problem.</li>
+<li>It is ok to link original code (or attach) as a
+      reference but it should not be required to answer
+      the question.</li>
+</ol>
+<p>Example, don't post code and state: "it doesn't work, help".<br />
+Determine where the issues is and create a specific question
+to the problems independent of the context of the project.
+The easier the question is to understand and test (e.g
+removing extraneous information) the faster the question
+will be answered.</p>
+<p>Mentors will be in a position to help dig through the project
+code.  To get the highest probability of a timely and useful
+answer the above recommendation should be used when posting
+to the mailing-list.</p>
+<p>This exhaustive essay on,
+<a href="http://www.catb.org/esr/faqs/smart-questions.html">interacting and getting questions answered by asking
+well-thought questions</a>,
+is a good guide.</p>
+<h2 id="writing-your-gsoc-application">Writing Your GSoC Application</h2>
+<p>A <a href="http://dev.myhdl.org/gsoc/gsoc_app_template.html">common template</a>
+is available to help bootstrap the student proposals.  For more
+information on GSoC see the <a href="https://developers.google.com/open-source/gsoc/">GSoC website</a>
+in particular the <a href="https://developers.google.com/open-source/gsoc/faq#students">student FAQ</a>
+is a good place to start for new students and the <a href="http://en.flossmanuals.net/GSoCStudentGuide/">student guide</a>
+is a thorough review of the program.</p>
+<h2 id="getting-started-with-myhdl">Getting Started with MyHDL</h2>
+<h3 id="using-myhdl">Using MyHDL</h3>
+<p>The <a href="http://docs.myhdl.org/en/latest/index.html">MyHDL manual</a>
+outlines how to design digital circuits with MyHDL.  MyHDL
+<a href="http://www.myhdl.org/start/installation.html">installation instructions</a>
+thoroughly cover installing the MyHDL package.</p>
+<p>The following
+is a list of additional examples and projects that can be used
+as first exercises and references:</p>
+<ul>
+<li><a href="http://www.myhdl.org/docs/examples/">MyHDL Examples</a></li>
+<li><a href="http://www.fpgarelated.com/showarticle/43.php">MyHDL List of Resources</a></li>
+</ul>
+<h3 id="contributing-to-myhdl-package">Contributing to MyHDL Package</h3>
+<p>The MyHDL project has outlined a
+<a href="http://dev.myhdl.org/guide/guide.html">development process</a>
+that should be followed by each participant.  This includes
+writing <a href="http://dev.myhdl.org/meps/mep-001.html">enhancement proposals</a>
+for projects that contribute directly to the MyHDL package.  Certain
+project ideas are based on existing MEPs.  The student proposal
+will be natural start to a MEP if needed.</p>
+<h2 id="project-ideas">Project Ideas</h2>
+<p>All projects require programming in Python, previous knowledge of
+<abbr title="Hardware Description Language">HDL</abbr> design, and many of the MyHDL specific projects (i.e. non-cores)
+require experience with compilers (familiarity with the Python
+compiler package desirable).</p>
+<h3 id="myhdl-package-project-ideas">MyHDL Package Project Ideas</h3>
+<h4 id="digital-filter-blocks">Digital filter blocks</h4>
+<p>This project includes developing various digital filters with
+MyHDL and integrating the filter-blocks with
+<a href="https://github.com/chipmuenk/pyfda">PyFDA</a>.  The filter-blocks
+will be added to the <a href="https://github.com/cfelton/filter-blocks"><code>filter-blocks</code></a>
+repository.  The student is encourage to start with simple digital
+filters and use the tools to verify and demonstrate the performance
+for the filters.  After a basic filter or two is completed it
+is expected the student will complete a more complex digital filter,
+examples: systolic structure, non-linear estimation filters,
+modular shared-resource structures, etc.  </p>
+<p>The potential mentors for this project are:</p>
+<ol>
+<li>
+<p><a href="https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php">Christopher L. Felton </a>,
+      cfelton on IRC, <a href="https://twitter.com/FeltonChris">@FeltonChris</a> on
+      twitter, and <a href="https://github.com/cfelton">@cfelton on github</a></p>
+</li>
+<li>
+<p><a href="">chipmuenk</a>,<br />
+<a href="https://github.com/chipmuenk">@chipmuenk on github</a></p>
+</li>
+</ol>
+<h4 id="interface-driven-ethernet-core">Interface driven Ethernet core</h4>
+<p>This project involves extending the Ethernet core that was
+developed in a previous GSoC to be an "interface driven"
+design.  The core is to be updated and extended with the
+interfaces provided in the <code>rhea</code> or <code>crux</code> packages.</p>
+<p>The following example illustrates the idea of the interface
+driven design - the details will be developed with the student.</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">glbl</span> <span class="o">=</span> <span class="n">Global</span><span class="p">()</span>         <span class="c1"># clock and resets</span>
+    <span class="n">ethcfg</span> <span class="o">=</span> <span class="n">EthConfig</span><span class="p">()</span>    <span class="c1"># contains all the setup info</span>
+    <span class="n">ethc</span> <span class="o">=</span> <span class="n">EthController</span><span class="p">()</span>  <span class="c1"># main data interface to the eth</span>
+
+    <span class="c1"># In this example, there are three blocks that are interfacing</span>
+    <span class="c1"># with the Ethernet controller.</span>
+    <span class="n">b1</span> <span class="o">=</span> <span class="n">ethc</span><span class="o">.</span><span class="n">get_branch</span><span class="p">()</span>
+    <span class="n">pkt1_inst</span> <span class="o">=</span> <span class="n">packet_type_a_handler</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+    <span class="n">b2</span> <span class="o">=</span> <span class="n">ethc</span><span class="o">.</span><span class="n">get_branch</span><span class="p">()</span>
+    <span class="n">pkt2_inst</span> <span class="o">=</span> <span class="n">packet_type_b_handler</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+
+    <span class="n">b3</span> <span class="o">=</span> <span class="n">ethc</span><span class="o">.</span><span class="n">get_branch</span><span class="p">()</span>
+    <span class="n">pkt3_inst</span> <span class="o">=</span> <span class="n">packet_type_c_handler</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+    <span class="n">eth_inst</span> <span class="o">=</span> <span class="n">eth_core</span><span class="p">(</span><span class="n">glbl</span><span class="p">,</span> <span class="n">ethc</span><span class="p">,</span> <span class="n">ethcfg</span><span class="p">)</span>
+    <span class="c1"># get the arbitration logic, handles</span>
+    <span class="n">arb_inst</span> <span class="o">=</span> <span class="n">ethc</span><span class="o">.</span><span class="n">arbitrate</span><span class="p">()</span>   
+</pre></div>
+
+
+<p>It is desirable, but not required, that the student have a
+development board with an tri-mode (10/100/1000) Ethernet phy.</p>
+<ol>
+<li><a href="https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php">Christopher L. Felton </a>,
+   cfelton on IRC, <a href="https://twitter.com/FeltonChris">@FeltonChris</a> on
+   twitter, and <a href="https://github.com/cfelton">@cfelton on github</a></li>
+</ol>
+        </div>
+
+        <div class="col-md-3" role="navigation">
+          <nav class="hidden-print hidden-xs hidden-sm">
+            <div class="sidebar" data-spy="affix"
+                 data-offset-top="80"
+                 data-offset-bottom="60">
+                <div class="well">
+                    <a href="#"><strong style="font-size:90%">Google Summer of Code 2018</strong></a>
+                    <div class="toc">
+<ul>
+<li><a href="#myhdl-project-introduction">MyHDL Project Introduction</a></li>
+<li><a href="#myhdl-community">MyHDL Community</a></li>
+<li><a href="#writing-your-gsoc-application">Writing Your GSoC Application</a></li>
+<li><a href="#getting-started-with-myhdl">Getting Started with MyHDL</a><ul>
+<li><a href="#using-myhdl">Using MyHDL</a></li>
+<li><a href="#contributing-to-myhdl-package">Contributing to MyHDL Package</a></li>
+</ul>
+</li>
+<li><a href="#project-ideas">Project Ideas</a><ul>
+<li><a href="#myhdl-package-project-ideas">MyHDL Package Project Ideas</a><ul>
+<li><a href="#digital-filter-blocks">Digital filter blocks</a></li>
+<li><a href="#interface-driven-ethernet-core">Interface driven Ethernet core</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+                </div>
+            </div>
+          </nav>
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <div style="margin: 8px">
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+window.__gcfg = {
+    lang: 'en-US'
+};
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>        </div>
+        <p></p>
+        <p>
+           <a href="https://github.com/myhdl/site-myhdl-dev"><i class="fa fa-github"></i>Website source</a>
+        <p>
+           Content licensed under the
+           <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a> license.
+           See <a href="/terms-of-use.html">Terms of Use</a>
+        </p> 
+        <p>
+           Powered by <a href="http://urubu.jandecaluwe.com">Urubu</a>
+        </p> 
+    </div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
