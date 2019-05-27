@@ -10,12 +10,11 @@ MyHDL participates as a Python sub-org.  Please first review the
 [PSF applicagtion template](https://wiki.python.org/moin/SummerOfCode/ApplicationTemplate2016).  
 
 
-The following checklist is a summary of what each applicatoin 
-should include.  See the subsequent sections for more information
-on each.
+The following checklist is a summary of what each application 
+should include.  See the subsequent sections for more information.
 
-* sub-org name (MyHLD).  The title of the applicaton should 
-  be "MyHDL: <project title"
+* sub-org name (MyHDL).  The title of the applicaton should 
+  be "MyHDL: <project title>"
 * student's name
 * email
 * telephone
@@ -64,6 +63,8 @@ students start fresh.
 * What is your favorite feature of MyHDL? Demonstrate it here with 
   a cool example.
 * Have you ever used git or another version control system?
+* Features and background for other programming languages you are 
+  familiar.
 
 
 ### You and your project
@@ -93,12 +94,12 @@ Answer the following questions in your proposal:
   the program. Also understand that during the project you will issue 
   weekly progress reports against that plan on your blog.
 * We also strongly encourage participants to generate a presentation
-  and present on there project at a conference.  Regional Python 
-  conferences are great, exampe [PyOhio]().  Other conferences: 
+  and present their project at a conference.  Regional Python 
+  conferences are great, an example [PyOhio](pyohio.org).  Other conferences: 
   The Embedded Systems Conference (ESC) or various IEEE gatherings.
 
 In planning your project, indicate where you expect certain tests
-to pass and when documentaiton will be completed.  Also indicate
+to pass and when **documentaiton will be completed**.  Also indicate
 numerous tests you envision being created for the project.
 
 Please do not verbatim copy text from the ideas page, or from other 
