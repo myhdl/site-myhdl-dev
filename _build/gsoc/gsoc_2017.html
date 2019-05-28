@@ -88,7 +88,7 @@
 
     <div class="page-header">
         <h1>Google Summer of Code 2017</h1>
-        <p><i>Last modified: 18-Mar-2017 by Christopher Felton</i></p>
+        <p><i>Last modified: 27-Mar-2017 by Keerthan Jaic</i></p>
     </div>
 
     <div class="row">
@@ -223,6 +223,7 @@ especially in the case of using interfaces as the control signals.</p>
 <li><a href="https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php">Christopher L. Felton</a>,
       cfelton on IRC, <a href="https://twitter.com/FeltonChris">@FeltonChris</a> on
       twitter, and <a href="https://github.com/cfelton">@cfelton on github</a></li>
+<li><a href="https://github.com/jck">Keerthan Jaic</a></li>
 </ol>
 <h4 id="converter-implemented-in-redbaron">Converter implemented in RedBaron</h4>
 <p>This is an exploratory project that will implement subset of the MyHDL
@@ -242,7 +243,7 @@ IR in MyHDL.  The benefit would be using the tools in FIRRTL.</p>
 </ol>
 <h4 id="cosimulaton-improvements">Cosimulaton improvements</h4>
 <p>Students interested in this project should comment on the the
-<a href="http://discourse.myhdl.org/t/potential-gsoc-ideas/163">discourse thread</a>.</p>
+<a href="http://discourse.myhdl.org/t/making-cosimulation-more-user-friendly/136">discourse thread</a>.</p>
 <p>This project is an exploratory project and will investigate enhancing
 the cosimulaiton interface by implementing a new VPI module in Rust.</p>
 <ol>
@@ -262,6 +263,15 @@ trace directly to FST binary format instead of only support VCD.</p>
 <li><a href="https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php">Christopher L. Felton</a>,
       cfelton on IRC, <a href="https://twitter.com/FeltonChris">@FeltonChris</a> on
       twitter, and <a href="https://github.com/cfelton">@cfelton on github</a></li>
+</ol>
+<h4 id="reduce-the-amount-of-global-state-used-by-myhdl">Reduce the amount of global state used by MyHDL</h4>
+<p>MyHDL uses global variables in many places. Most notably, in the Simulation
+module. This is a bad idea for various reasons. The main goal of this project
+is to document and reduce the number of global variables used by MyHDL.</p>
+<p>Please consult the discussion of the following <a href="https://github.com/myhdl/myhdl/issues/68">rejected PR</a>
+as a starting point.</p>
+<ol>
+<li><a href="https://github.com/jck">Keerthan Jaic</a></li>
 </ol>
 <h3 id="potential-mentors">Potential Mentors</h3>
 <ul>
@@ -297,6 +307,7 @@ trace directly to FST binary format instead of only support VCD.</p>
 <li><a href="#firrtl-conversoin-support">FIRRTL conversoin support</a></li>
 <li><a href="#cosimulaton-improvements">Cosimulaton improvements</a></li>
 <li><a href="#all-things-waveform-viewing">All things waveform viewing</a></li>
+<li><a href="#reduce-the-amount-of-global-state-used-by-myhdl">Reduce the amount of global state used by MyHDL</a></li>
 </ul>
 </li>
 <li><a href="#potential-mentors">Potential Mentors</a></li>

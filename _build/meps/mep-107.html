@@ -197,7 +197,7 @@ in large complex designs.</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">myhdl</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">class</span> <span class="nc">MyObj</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">intbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">8</span><span class="p">:])</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">intbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">4</span><span class="p">:])</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">intbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">9</span><span class="p">:])</span>
@@ -291,7 +291,7 @@ an example of a conversion using the bus.  The conversion
 code is only a snippet of the full converted code, relevant
 code with the name extension.</p>
 <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">BareBoneBus</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">wr</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rd</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ack</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>

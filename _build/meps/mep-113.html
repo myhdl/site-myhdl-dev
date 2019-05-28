@@ -89,7 +89,7 @@
     <div class="page-header">
 <h1>MEP 113: Signal Naming Delimiters&nbsp;&nbsp;
 </h1>
-        <p><i>Last modified: 11-Jan-2016 by Jan Decaluwe</i></p>
+        <p><i>Last modified: 03-Aug-2017 by Nathan Sketch</i></p>
     </div>
 
     <div class="row">
@@ -107,11 +107,11 @@
             <h2 id="introduction-motivation">Introduction (Motivation)</h2>
 <p>The signal names that are used in the VHDL and Verilog are important in both FPGA synthesis as well as vcd waveforms. Unpredictable or confusing signal names make it difficult to write timing and location constaints. Signal names can be confusing through ambiguity or mutability. A name is ambiguous when it is difficult to predict what name the signal will be assigned in VHDL or Verilog or when it is difficult to understand what myHDL was used to generate a module of VHDL or Verilog. A name is mutable when the signal name that is assigned in VHDL or Verilog depends on unrelated information (like what other names were used in the module, or how the signal gets used in interior logic blocks). One of the causes of mutability is naming collisions. The tool resolves two signals with the same name by adding a suffix to one of them. Without knowing the names of every signal in the design it is impossible to guarantee that your signal name won't collide with a signal somewhere else in the design.</p>
 <p>To prevent excessive signal name collisions, delimiters are used to separate variables in different "namespaces". Currently underscores are used as a delimiter to denote a signal's location in the module hierarchy (functions that return generators) as well as it's membership in an interface (classes with members that are signals). Underscores are also quite common in properly styled python variables.</p>
-<p>The triple usage of underscores increases the likelihood of signal name collisions and makes the VHDL and Verilog more ambiguous. A signal with the name a_b in the VHDL or Verilog could mean that there was an interface named a whose member is b, or it could mean that there was a module named a with a local signal named c, or it could just be a signal in the top level whose name is a_c.</p>
+<p>The triple usage of underscores increases the likelihood of signal name collisions and makes the VHDL and Verilog more ambiguous. A signal with the name a_b in the VHDL or Verilog could mean that there was an interface named a whose member is b, or it could mean that there was a module named a with a local signal named b, or it could just be a signal in the top level whose name is a_b.</p>
 <p>One of the main reasons why we are using underscores in the first place is because there aren't really any other valid characters that you can use in identifiers in VHDL and Verilog unless you use escaped/extended identifiers. Escaped/extended identifiers are a standard way to use additional characters in signal names. Usually they are used by <abbr title="Hardware Description Language">HDL</abbr> tools to export netlists because the internal netlist structure supports different character sets than VHDL or Verilog.</p>
 <p>If we were to change the hierarchy and interface delimiter, we would reduce our signal name collisions, and increase the clarity of our VHDL and Verilog.</p>
 <h2 id="specification">Specification</h2>
-<p>All signals that are an interface or not in the top level function must have their names escaped. In Verilog that is accomplished by starting the name with a backslash '\' and terminated the name with whitespace. In VHDL this is accomplished by enclosing the name between backslashes '\'. Extended identifiers in VHDL are case sensitive.</p>
+<p>All signals that are in an interface or not in the top level function must have their names escaped. In Verilog that is accomplished by starting the name with a backslash '\' and terminated the name with whitespace. In VHDL this is accomplished by enclosing the name between backslashes '\'. Extended identifiers in VHDL are case sensitive.</p>
 <p>Whether top level, non-interface signals are also escaped is beyond the scope of this proposal, although doing so would provide greater consistency as well as resolve collisions with VHDL and Verilog keywords and VHDL case insensitivity.</p>
 <h3 id="instance-hierarchy">Instance Hierarchy</h3>
 <p>It is a common convention in tree based hierarchies like file systems to use a forward slash '/' or a backslash '\' as a separator. Backslashes are used in escaping identifiers so a forward slash is probably the better delimiter or the two.</p>
@@ -128,7 +128,7 @@
 
 
 <h3 id="interface-membership">Interface membership</h3>
-<p>In many programming languages, (including python), the "." operator is used to access attributes of an object. By using the "." in signal names, this would mirror the myHDL code that accessed the interface member to begin with.</p>
+<p>In many programming languages (including python) the "." operator is used to access attributes of an object. By using the "." in signal names, this would mirror the myHDL code that accessed the interface member to begin with.</p>
 <p>Verilog Example</p>
 <div class="codehilite"><pre><span></span><span class="k">assign</span> <span class="err">\</span><span class="n">spi_master</span><span class="p">.</span><span class="n">mosi</span>  <span class="o">=</span> <span class="err">\</span><span class="n">spi_slave</span><span class="p">.</span><span class="n">miso</span> <span class="p">;</span>
 </pre></div>
